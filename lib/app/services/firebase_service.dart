@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:developer';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -14,7 +15,7 @@ class FirebaseService {
 
   static Future<void> init() async {
     if (Platform.isAndroid) {
-      await Firebase.initializeApp(name: dotenv.get("PROJECT_ID", fallback: ""), options: _android);
+      await Firebase.initializeApp(options: _android);
     } else if (Platform.isIOS) {
       await Firebase.initializeApp();
     }
