@@ -10,6 +10,7 @@ import '../../services/file_downloader_service.dart';
 import '../../services/firebase_service.dart';
 import '../../services/notification_service.dart';
 import '../../widgets/show_toast.dart';
+import 'dart:developer';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -194,6 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> sendFCMToken({required String userId}) async {
     try {
       String fcmToken = await FirebaseService.fetchAndSaveFcmToken() ?? "";
+      log("log: FCM Token $fcmToken");
       await ApiProvider().postRequest(endPoint: "user-api/save-device-id-api/", body: {"user_id": userId, "device_id": fcmToken});
     } catch (e) {
       ShowToast(msg: "Something went wrong!");

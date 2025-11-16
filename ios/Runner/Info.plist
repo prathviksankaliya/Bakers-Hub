@@ -26,8 +26,28 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <false/>
+
+	<key>NSCameraUsageDescription</key>
+	<string>The app requires access to your camera to capture photos and videos.</string>
+    
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The app requires access to your photo library to upload and select media.</string>
+    
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+    
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+		<string>fetch</string>
+	</array>
+    
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
