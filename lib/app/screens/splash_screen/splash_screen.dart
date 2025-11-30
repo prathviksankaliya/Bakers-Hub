@@ -20,15 +20,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset("assets/images/logo.png", height: 150,width: 150,),
-                const Text("Bakers Hub", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
-              ],
-            )));
+    return Scaffold(backgroundColor: Color(0xFFd1a16f),body: Center(child: Padding(padding: EdgeInsetsGeometry.symmetric(horizontal: 50), child: Image.asset("assets/images/banner_logo.png"),)));
   }
 }
