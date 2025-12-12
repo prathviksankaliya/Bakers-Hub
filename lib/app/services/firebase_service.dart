@@ -15,7 +15,7 @@ class FirebaseService {
 
   static Future<void> init() async {
     if (Platform.isAndroid) {
-      await Firebase.initializeApp(options: _android);
+      await Firebase.initializeApp(name: dotenv.get("PROJECT_ID", fallback: ""), options: _android);
     } else if (Platform.isIOS) {
       await Firebase.initializeApp();
     }

@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
               if (showFirstLoader)
                 Container(
                   color: Colors.white, // optional: cover background fully
-                  child: const Center(child: CircularProgressIndicator(color: Colors.blue,)),
+                  child: const Center(child: CircularProgressIndicator(color: Color(0xFFd1a16f),)),
                 ),
             ],
           ),

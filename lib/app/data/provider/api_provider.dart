@@ -16,7 +16,7 @@ class ApiProvider{
   Future<Map<String, dynamic>> postRequest({required String endPoint, Object? body}) async {
     try {
       final response = await http
-          .post(Uri.parse(dotenv.get("BASE_URL", fallback: "") + endPoint),
+          .post(Uri.parse(dotenv.get("APP_URL", fallback: "") + endPoint),
           headers: _headers,
           body: jsonEncode(body))
           .timeout(const Duration(seconds: 35));
