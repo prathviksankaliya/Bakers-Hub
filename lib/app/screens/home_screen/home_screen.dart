@@ -11,6 +11,7 @@ import '../../services/firebase_service.dart';
 import '../../services/notification_service.dart';
 import '../../widgets/show_toast.dart';
 import 'dart:developer';
+import 'dart:io';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -69,6 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
+          bottom: Platform.isAndroid,
+          minimum: EdgeInsets.only(bottom: 5),
           child: Stack(
             children: [
               InAppWebView(
