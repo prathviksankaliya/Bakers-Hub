@@ -34,10 +34,10 @@
     <false/>
 
 	<key>NSCameraUsageDescription</key>
-	<string>The app requires access to your camera to capture photos and videos.</string>
+	<string>Bakers Hub requires camera access to capture photos and videos for attachments within the app.</string>
     
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The app requires access to your photo library to upload and select media.</string>
+	<string>We use your photo library access to let you choose photos and videos for attachments in Bakers Hub.</string>
     
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
